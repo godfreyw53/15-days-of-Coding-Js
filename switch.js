@@ -1,0 +1,3 @@
+switch(variable){
+    case
+}
