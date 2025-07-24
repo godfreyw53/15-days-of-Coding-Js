@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <title>Simple Calculator</title>
+  <meta charset="UTF-8">
+  <title>Mini Bank</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Simple JS Calculator</h2>
-    <button onclick="startCalculator()">Start Calculation</button>
-    <p id="result"></p>
 
-    <!-- Make sure this matches your actual JS file name -->
-    <script src="monday.js"></script>
+  <div id="login-screen">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showSignup()">Create one</a></p>
+  </div>
+
+  <div id="signup-screen" style="display:none">
+    <h2>Create Account</h2>
+    <input type="text" id="signup-name" placeholder="Name">
+    <input type="email" id="signup-email" placeholder="Email">
+    <input type="password" id="signup-password" placeholder="Password">
+    <input type="number" id="signup-deposit" placeholder="Initial Deposit">
+    <button onclick="createAccount()">Create Account</button>
+    <p><a href="#" onclick="showLogin()">Back to Login</a></p>
+  </div>
+
+  <div id="dashboard" style="display:none">
+    <h2>Welcome, <span id="user-name"></span></h2>
+    <p>Balance: $<span id="user-balance"></span></p>
+
+    <h3>Deposit</h3>
+    <input type="number" id="deposit-amount" placeholder="Amount">
+    <button onclick="deposit()">Deposit</button>
+
+    <h3>Withdraw</h3>
+    <input type="number" id="withdraw-amount" placeholder="Amount">
+    <button onclick="withdraw()">Withdraw</button>
+
+    <br><br>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="apps.js"></script>
 </body>
 </html>
