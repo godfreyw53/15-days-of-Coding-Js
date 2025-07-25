@@ -27,7 +27,6 @@ const fruits=[
             }
 
 ]
-console.log("...............................................")
 
 fruits.push(
             {
@@ -48,8 +47,12 @@ fruits.push(
             }
         
 )
-fruits.pop(fruits)
+fruits.forEach(matunda => console.log(matunda.name))
 
-fruits.slice()
 
-console.log(fruits)
+const fruitNames= fruits.map(matunda => matunda.name)
+const fruitColors = fruits.map(matunda=>matunda.color)
+const fruitCalories = fruits.map(matunda=>matunda.calories)
+console.log(fruitNames)
+console.log(fruitColors)
+console.log(fruitCalories)
